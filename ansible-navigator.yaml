@@ -1,0 +1,11 @@
+ansible-navigator:
+  execution-environment:
+    enabled: true
+    image: ghcr.io/jirifilip/learning-ansible-builder:latest
+
+  ansible-runner:
+    artifact-dir: ./.artifacts
+
+  playbook-artifact:
+    enable: true
+    save-as: ./.artifacts/playbook.json

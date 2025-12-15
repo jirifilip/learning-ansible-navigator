@@ -1,0 +1,11 @@
+- name: Test play
+  hosts: localhost
+  tasks:
+    - name: Log hello world
+      ansible.builtin.debug:
+        msg: "Hello world"
+
+    - name: Log facts
+      ansible.builtin.debug:
+        var: ansible_facts
+

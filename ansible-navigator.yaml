@@ -12,7 +12,7 @@ ansible-navigator:
     image: ghcr.io/jirifilip/learning-ansible-builder:latest
     volume-mounts:
       - src: ./.vagrant/machines/default/virtualbox/private_key
-        dest: /home/ansible-user/.ssh/id_rsa
+        dest: /runner/private_key
         options: z
 
   ansible-runner:

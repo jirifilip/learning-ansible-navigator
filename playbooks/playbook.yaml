@@ -9,3 +9,9 @@
       ansible.builtin.debug:
         var: ansible_facts
 
+- name: Test Vagrant host connection
+  hosts: vagrant
+  tasks:
+    - name: Log facts
+      ansible.builtin.debug:
+        var: ansible_facts

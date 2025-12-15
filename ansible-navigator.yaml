@@ -1,7 +1,19 @@
 ansible-navigator:
+  ansible:
+    config:
+      path: ./ansible.cfg
+
+    inventory:
+      entries:
+        - ./inventory/main.yaml
+
   execution-environment:
     enabled: true
     image: ghcr.io/jirifilip/learning-ansible-builder:latest
+    volume-mounts:
+      - src: ./.vagrant/machines/default/virtualbox/private_key
+        dest: /home/ansible-user/.ssh/id_rsa
+        options: z
 
   ansible-runner:
     artifact-dir: ./.artifacts
